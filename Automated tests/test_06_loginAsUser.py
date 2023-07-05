@@ -1,4 +1,4 @@
-'''Automated test script that login as User on website 'Evidencija Racunarske Opreme'. The same Admin is then logged out. '''
+'''An automated test script that logs in as a User on the website 'Evidencija Računarske Opreme'.'''
 
 def Test06():
 

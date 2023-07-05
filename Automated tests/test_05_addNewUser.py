@@ -1,4 +1,4 @@
-'''Automated test script login as Admin and creates a new User profile on website section 'Administracija Korisnika' on website 'Evidencija Racunarske Opreme'. '''
+'''An automated test script that logs in as an Admin and creates a new User profile in the 'Administracija Korisnika' section of the website 'Evidencija Računarske Opreme'.'''
 
 def Test05():
 
@@ -77,7 +77,7 @@ def Test05():
             test_result_05 = f"Test no. 05 passed! User profile with firstname = {listOfAtributes[1]}, lastname = {listOfAtributes[2]} is successfully added to table users."
             break
         else:
-            test_result_05 = f"Test no.05 failed! User profile is not created"
+            test_result_05 = f"Test no.05 failed! User profile is not created!"
 
 
     time.sleep(4)

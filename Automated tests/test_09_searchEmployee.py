@@ -1,4 +1,4 @@
-'''Automated test script that login as Admin on website 'Evidencija Racunarske Opreme' and search employee by name. '''
+'''An automated test script that logs in as an Admin on the website 'Evidencija Računarske Opreme' and searches for an employee by name.'''
 
 def Test09(): 
 

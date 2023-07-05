@@ -1,4 +1,4 @@
-'''Automated test script login as Admin and deletes created Admin profile on website section 'Administracija Korisnika' on website 'Evidencija Racunarske Opreme'.'''
+'''An automated test script that logs in as an Admin and deletes the created Admin profile in the 'Administracija Korisnika' section of the website 'Evidencija Računarske Opreme'.'''
 def Test04():
 
     from selenium import webdriver 

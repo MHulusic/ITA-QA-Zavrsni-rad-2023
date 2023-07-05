@@ -1,4 +1,4 @@
-'''Automated test script that login as Admin on website 'Evidencija Racunarske Opreme'. The same Admin is then logged out. '''
+'''An automated test script that logs in as an Admin on the website 'Evidencija Računarske Opreme'.'''
 def Test01(): 
 
     from selenium import webdriver 

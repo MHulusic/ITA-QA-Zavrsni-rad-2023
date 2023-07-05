@@ -1,14 +1,15 @@
 '''
-Test Runner is script that runs all test scripts prepared for website 'Evidencija Racunarske Opreme' and print report in .csv file. 
+Test Runner is a script that runs all test scripts prepared for the website 'Evidencija Računarske Opreme' and prints a report in a .csv file.
 
 IMPORTANT:
 
-Brfore running the script please check if:
+Before running the script, please check if:
 
-    - if all credentials in "credentials.py"are filled corectly and are unique
-    - for test_08_addNewEmployee please check if Broj kancelarije "001" and Organizaciona jedinica "TEST OJ" already exist if not it MUST BE created before starting this test
-    - for test_11_addNewEquipment please check if Tip opreme "Test Equipment" and Proizvođač opreme "Test Company " already exist if not it MUST BE created before starting this test
-    
+- All credentials in "credentials.py" are filled correctly and are unique.
+- For test_08_addNewEmployee, please check if the Broj kancelarije "001" and Organizaciona jedinica "TEST OJ" already exist. 
+    If not, they MUST BE created before starting this test.
+- For test_11_addNewEquipment, please check if the Tip opreme "Test Equipment" and Proizvođač opreme "Test Company" already exist. 
+    If not, they MUST BE created before starting this test.
 '''
 
 

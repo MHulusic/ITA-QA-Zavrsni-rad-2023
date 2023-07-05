@@ -1,4 +1,4 @@
-'''Automated test script that login as Admin on website 'Evidencija Racunarske Opreme' and add new equipment. The same equipment is later deleted'''
+'''An automated test script that logs in as an Admin on the website 'Evidencija Računarske Opreme' and deletes added equipment.'''
 
 def Test12(): 
 

@@ -1,4 +1,4 @@
-'''Automated test script login as Admin and delete created user profile on website section 'Administracija Korisnika' on website 'Evidencija Racunarske Opreme'.'''
+'''An automated test script that logs in as an Admin and deletes the created user profile in the 'Administracija Korisnika' section of the website 'Evidencija Računarske Opreme'.'''
 
 def Test07():
 

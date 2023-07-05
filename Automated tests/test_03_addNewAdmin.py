@@ -1,4 +1,4 @@
-'''Automated test script login as Admin and creates a new Admin profile on website section 'Administracija Korisnika' on website 'Evidencija Racunarske Opreme'.  '''
+'''An automated test script that logs in as an Admin and creates a new Admin profile in the 'Administracija Korisnika' section of the website 'Evidencija Računarske Opreme'. '''
 def Test03():
 
     from selenium import webdriver 
@@ -77,7 +77,7 @@ def Test03():
             test_result_03 = f"Test no.03 passed! Admin profile with firstname = {listOfAtributes[1]}, lastname = {listOfAtributes[2]} is successfully added to table users at {listOfAtributes[0]}. position"
             break
         else:
-            test_result_03 = f"Test no.03 failed! Admin profile is not created"
+            test_result_03 = f"Test no.03 failed! Admin profile is not created!"
 
     time.sleep(4)
 

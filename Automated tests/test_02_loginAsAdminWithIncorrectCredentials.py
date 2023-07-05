@@ -1,4 +1,4 @@
-'''Automated test script that try to login as Admin on website 'Evidencija Racunarske Opreme' with incorrect credentials.'''
+'''An automated test script that tries to log in as an Admin on the website 'Evidencija Računarske Opreme' with incorrect credentials.'''
 def Test02(): 
 
     from selenium import webdriver 
@@ -37,7 +37,7 @@ def Test02():
     test_result_02 = ""
     
     if message.text == "Neispravno korisničko ime ili lozinka.":
-        test_result_02 = "Test no.01 passed! The login with incorrect credentials is unsuccessful, and an alert is displayed for incorrect credentials. "
+        test_result_02 = "Test no.02 passed! The login with incorrect credentials is unsuccessful, and an alert is displayed for incorrect credentials. "
     else:
         test_result_02 = "Test no.02 failed!"
 

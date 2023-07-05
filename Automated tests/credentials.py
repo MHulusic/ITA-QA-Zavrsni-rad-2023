@@ -1,10 +1,10 @@
 '''
-In Credentials you should setup all credentials and names used for automated testing of website 'Evidencija Racunarske Opreme'. 
+In the Credentials file, you should set up all the credentials and names used for the automated testing of the website 'Evidencija Računarske Opreme'.
 
 IMPORTANT:
 
--all credentials and names except adminUsername and adminPassword should be deleted manualy from the website if already exits 
-    or should be changed to new (non-exitant) diractly in this script
+All credentials and names, except for adminUsername and adminPassword, should be manually deleted from the website if they already exist or should be changed to 
+    new unique (non-existent) values directly in this script.
 '''
 
 # MASTER - DO NOT CHANGE
