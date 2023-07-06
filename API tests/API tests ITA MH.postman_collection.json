@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "6baae4c4-0148-4c29-b8c3-da1453a9042d",
+		"name": "API tests ITA MH",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26071731"
+	},
+	"item": [
+		{
+			"name": "https://www.randomuser.me/api/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"responseJson = pm.response.json()\r",
+							"results = responseJson.results\r",
+							"\r",
+							"// Test no. 1: Usernames are shorter then 10 characters\r",
+							"\r",
+							"pm.test(\"Check if any of the usernames are shorter then 10 characters\", function () {\r",
+							"    let usernames = []\r",
+							"    for (let i = 0; i < results.length; i++) {\r",
+							"        let username = results[i].login.username\r",
+							"        if(username.length < 10) {\r",
+							"            usernames.push(username);\r",
+							"        }\r",
+							"    }\r",
+							"    let lengthOfUsernames = usernames.length;\r",
+							"    pm.expect(lengthOfUsernames).to.be.eql(0, `There are ${lengthOfUsernames} username(s) that are shorter than 10 characters.`)\r",
+							"});\r",
+							"\r",
+							"//Test no.2: There are no users born in December \r",
+							"\r",
+							"pm.test(\"Check if there are no users born in December\", function(){\r",
+							"    let count = 0\r",
+							"    for (let i = 0; i<results.length; i++) {\r",
+							"        var userAge = results[i].dob.date\r",
+							"        let year = userAge.split(\"-\")\r",
+							"        if (year[1] == 12) {\r",
+							"            count = count + 1\r",
+							"        }\r",
+							"    }\r",
+							"    pm.expect(count).to.be.eql(0, `There are ${count} user(s) that are born in December.`)\r",
+							"});\r",
+							"\r",
+							"//Test no.3: Username should not include special characters\r",
+							"\r",
+							"responseJson = pm.response.json();\r",
+							"results = responseJson.results;\r",
+							"\r",
+							"pm.test(\"Check if any usernames include special characters\", function () {\r",
+							"    let usernamesWithSpecialCharacters = [];\r",
+							"    for (let i = 0; i < results.length; i++) {\r",
+							"        let username = results[i].login.username;\r",
+							"        let hasSpecialCharacters = /[!@#$%^&*(),.?\":{}|<>]/;\r",
+							"        if (hasSpecialCharacters.test(username)) {\r",
+							"            usernamesWithSpecialCharacters.push(username);\r",
+							"        }\r",
+							"    }\r",
+							"    let count = usernamesWithSpecialCharacters.length;\r",
+							"    pm.expect(count).to.be.eql(0, `There are ${count} username(s) that include special characters.`);\r",
+							"});\r",
+							"\r",
+							"//Test no.4: Check if email is legitimate email \r",
+							"\r",
+							"pm.test(\"Check if email is a legitimate email\", function () {\r",
+							"    let invalidEmails = [];\r",
+							"\r",
+							"    for (let i = 0; i < results.length; i++) {\r",
+							"        let email = results[i].email;\r",
+							"        let emailPattern = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;\r",
+							"        let isLegitimateEmail = emailPattern.test(email);\r",
+							"\r",
+							"        if (!isLegitimateEmail) {\r",
+							"            invalidEmails.push(email);\r",
+							"        }\r",
+							"    }\r",
+							"\r",
+							"    let count = invalidEmails.length;\r",
+							"    pm.expect(count).to.be.eql(0, `There are ${count} email(s) that are not legitimate.`);\r",
+							"});\r",
+							"\r",
+							"//Test no.5: Check if there is more female than male users\r",
+							"\r",
+							"pm.test(\"Check if there are more female users than male users\", function () {\r",
+							"    let femaleCount = 0;\r",
+							"    let maleCount = 0;\r",
+							"\r",
+							"    for (let i = 0; i < results.length; i++) {\r",
+							"        let gender = results[i].gender;\r",
+							"        if (gender == \"female\") {\r",
+							"            femaleCount++;\r",
+							"        } else if (gender == \"male\") {\r",
+							"            maleCount++;\r",
+							"        }\r",
+							"    }\r",
+							"\r",
+							"    pm.expect(femaleCount).to.be.greaterThan(maleCount, \"There are fewer female users than male users.\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://randomuser.me/api/?results=25",
+					"protocol": "https",
+					"host": [
+						"randomuser",
+						"me"
+					],
+					"path": [
+						"api",
+						""
+					],
+					"query": [
+						{
+							"key": "results",
+							"value": "25"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
