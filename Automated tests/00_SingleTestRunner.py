@@ -6,7 +6,7 @@ IMPORTANT:
 -you have to enter full test name and test function
 '''
 
-from test_12_deleteEquipment import Test12
-result = Test12()
+from test_03_addNewAdmin import Test03
+result = Test03()
 print("Test results is:", result)
 

@@ -1,0 +1,13 @@
+TEST RESULTS
+Test no.01 passed! Admin mustafahulusic is successfully logged in.
+"Test no.02 passed! The login with incorrect credentials is unsuccessful, and an alert is displayed for incorrect credentials. "
+"Test no.03 passed! Admin profile with firstname = TestAdminM, lastname = TestAdminM is successfully added to table users at 120. position"
+"Test no.04 passed! Admin profile with firstname = TestAdminM, lastname = TestAdminM is successfully deleted from table users."
+"Test no. 05 passed! User profile with firstname = TestUserM, lastname = TestUserM is successfully added to table users."
+Test no.06 passed! User TestUserM is successfully logged in.
+"Test no.07 passed! User profile with firstname = TestUserM, lastname = TestUserM is successfully deleted from table users."
+"Test no.08 passed! New employee with firstname = TestEmployeeM, lastname = TestEmployeeM is successfully added to table users."
+"Test no.09 passed! New employee with firstname = TestEmployeeM, lastname = TestEmployeeM is successfully found with search functionality."
+"Test no.10 passed! Employee with firstname = TestEmployeeM, lastname = TestEmployeeM is successfully deleted from table employees."
+"Test no.11 passed! New equipment with type = Test Equipment, producer = Test Company is successfully added to table users with inentory no. TEQ000001 and serial no. T000001."
+"Test no.12 passed! Equipment with type = Test Equipment, producer = Test Company is deleted from table equipment."
